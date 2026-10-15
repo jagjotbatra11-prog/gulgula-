@@ -1,0 +1,18 @@
+*{box-sizing:border-box} :root{--ink:#243b83;--pink:#ff6eaa;--blue:#6497ff}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:20px 12px 12px;background:radial-gradient(circle at 15% 10%,#263c77,#08152e 60%,#050b1a);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:var(--ink);overflow-x:hidden}
+.sprinkles{position:fixed;inset:0;display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;opacity:.16;font-size:26px;pointer-events:none;line-height:4}
+.phone{width:min(100%,390px);min-height:650px;background:#edf1ff;border:7px solid #10182d;border-radius:38px;padding:22px 22px 28px;box-shadow:0 22px 65px #0008;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.tiny{text-align:center;font-size:10px;color:#8392c5;position:absolute;top:17px;left:12px;right:12px;letter-spacing:.3px}
+.screen{display:none;text-align:center;animation:appear .45s ease both;padding:24px 0 4px}.screen.active{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.icon{font-size:64px;filter:drop-shadow(0 7px 10px #7588b744);margin:8px 0 20px}.eyebrow{font-size:11px;color:#8390c2;text-transform:uppercase;letter-spacing:1.4px}
+h1{font-size:28px;line-height:1.2;margin:12px 0;color:#244184}h1 span{color:#f05297}h2{font-size:24px;line-height:1.2;margin:10px 0 14px;color:#244184}
+p{font-size:15px;line-height:1.75;color:#4e5e94;margin:12px auto 22px;max-width:290px}.script{font-style:italic;font-size:13px}
+.sticker{font-size:76px;margin:8px 0 16px;filter:drop-shadow(0 8px 8px #7b8bb533)}
+button{border:0;border-radius:999px;background:linear-gradient(100deg,#74a6ff,#5480ee);color:white;font-weight:750;padding:13px 19px;font-size:13px;box-shadow:0 7px 16px #5d8cf044;cursor:pointer;transition:transform .15s;width:100%;margin-top:8px}
+button:active{transform:scale(.97)}button.soft{background:#fff;color:#5571bd;border:1px solid #d8e0ff;box-shadow:none}
+.bigheart{font-size:78px;margin:10px 0;animation:beat 1.2s infinite}@keyframes beat{50%{transform:scale(1.12)}}
+.choices{display:grid;gap:8px}.answer{font-weight:700;color:#e94d96;min-height:28px;margin-bottom:4px}.restart{margin-top:8px}
+.letter p{text-align:left;background:#fff;border-radius:18px;padding:17px 16px;box-shadow:0 5px 18px #6377b31a;font-size:13px;line-height:1.75;max-width:none}
+footer{color:#b6c4f5;font-size:11px;text-align:center;margin:14px 0 0}
+@media(max-height:760px){.phone{min-height:600px}.letter p{max-height:300px;overflow:auto}}

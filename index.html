@@ -2,46 +2,72 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>For Sirji 🩷</title><link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#edf1ff">
+<title>For Sirji 🩷 — from Gulgula</title>
+<style>
+:root{--ink:#172b68;--pink:#ff86b5;--blue:#5b8cf7;--paper:#edf1ff}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:radial-gradient(circle at 20% 10%,#fff 0,transparent 28%),linear-gradient(145deg,#e6edff,#fff0f7);overflow-x:hidden}
+main{width:min(100%,470px);margin:auto;padding:18px 18px 40px;position:relative;z-index:1}
+.top{display:flex;justify-content:space-between;align-items:center;font:12px Arial,sans-serif;color:#6b78a8;margin-bottom:12px}
+.pill{border:1px solid #d9e1ff;background:#ffffffa8;border-radius:20px;padding:7px 11px}
+.phone{min-height:68vh;background:rgba(255,255,255,.58);border:5px solid #fff;border-radius:32px;box-shadow:0 15px 45px #5064a51f;overflow:hidden;position:relative;padding:22px 18px 28px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.float{position:fixed;pointer-events:none;z-index:0;animation:drift 8s ease-in-out infinite;opacity:.65}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-22px) rotate(10deg)}}
+h1{font-size:26px;line-height:1.2;margin:18px 0 8px}p{line-height:1.65}
+.subtitle{font:12px Arial,sans-serif;letter-spacing:1.7px;color:#7585bb;text-transform:uppercase}
+.envelope-wrap{margin:34px auto 20px;cursor:pointer;filter:drop-shadow(0 10px 10px #6b7ca82a);transition:transform .2s}
+.envelope-wrap:active{transform:scale(.96)}
+.envelope{width:150px;height:105px;background:#ff9dc3;position:relative;border-radius:7px;overflow:visible}
+.envelope:before{content:"";position:absolute;inset:0;background:#ffc2d8;clip-path:polygon(0 0,50% 56%,100% 0)}
+.envelope:after{content:"";position:absolute;inset:0;background:#ff8eb8;clip-path:polygon(0 100%,0 0,50% 57%,100% 0,100% 100%)}
+.seal{position:absolute;z-index:2;left:calc(50% - 17px);top:40px;font-size:30px}
+button{border:0;border-radius:28px;padding:14px 22px;background:linear-gradient(100deg,#5c8df8,#82b1ff);color:#fff;font:600 14px Arial,sans-serif;box-shadow:0 6px 14px #5b8cf733;cursor:pointer}
+button.secondary{background:#fff;color:#526fb5;border:1px solid #d9e2ff;box-shadow:none}
+.hint{font:12px Arial,sans-serif;color:#8a95bc;margin-top:12px}
+#letter{display:none;text-align:left;background:#fff;border-radius:14px;padding:22px 20px;margin-top:18px;box-shadow:0 5px 20px #6373a21c;width:100%;animation:appear .6s ease}
+#letter h2{text-align:center;font-size:22px;margin:0 0 18px}#letter p{font-size:16px;color:#304273;margin:0 0 14px}
+@keyframes appear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+#letter .sign{text-align:right;font-style:italic;font-weight:bold;color:#d45e91}
+.footer{font:11px Arial,sans-serif;color:#8994b9;margin:18px 0 0}
+#surprise{display:none;margin-top:18px;font-size:17px;background:#fff5fa;border:1px dashed #ff9fc4;border-radius:14px;padding:16px}
+.heart{position:fixed;bottom:-30px;z-index:2;pointer-events:none;animation:rise 5s linear forwards}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@media(max-height:700px){.phone{min-height:600px}}
+</style>
 </head>
 <body>
-<div class="sprinkles" aria-hidden="true">💗 ✨ 🌸 💌 💕 ✨ 🌷</div>
-<main class="phone">
-  <div class="tiny">A tiny corner of the internet, just for us 🩷</div>
-  <section class="screen active" id="s0">
-    <div class="icon">💌</div><div class="eyebrow">A little something for you</div>
-    <h1>Sirji… this is<br><span>for you 🩷</span></h1>
-    <p class="script">From your Gulgula, with extra drama.</p>
-    <button onclick="go(1)">Open your surprise ✨</button>
-  </section>
-  <section class="screen" id="s1">
-    <div class="sticker">🐻‍❄️💗</div><h2>Okay, listen…</h2>
-    <p>I was going to act normal, but then I remembered… I’m your Gulgula. Normal was never in the plan. 😌</p>
-    <button onclick="go(2)">Continue, Sirji →</button>
-  </section>
-  <section class="screen" id="s2">
-    <div class="sticker">🧸🫶🏻</div><h2>You mean everything</h2>
-    <p>You’re my favourite notification, my personal headache, and the person I’d still choose—even when you’re being extra annoying. 💗</p>
-    <button onclick="go(3)">One more thing…</button>
-  </section>
-  <section class="screen" id="s3">
-    <div class="sticker">🥹💞</div><h2>Straight from my heart</h2>
-    <p>Thank you for being <em>you</em>. You make ordinary days feel special, and somehow you’ve become my favourite part of them.</p>
-    <button onclick="go(4)">Read my little letter 💌</button>
-  </section>
-  <section class="screen letter" id="s4">
-    <div class="icon">💌</div><h2>Dear Sirji 🩷</h2>
-    <p>From: Gulgula<br><br>Just a reminder that you are very, very special to me. I may tease you, annoy you, and steal your attention… but it’s only because you have a permanent place in my heart. 🙈<br><br>So please keep smiling, take care of yourself, and remember that someone out here is ridiculously fond of you.<br><br><strong>Yours in all the silly ways,<br>Gulgula 🩷</strong></p>
-    <button onclick="go(5)">Last surprise 🥹</button>
-  </section>
-  <section class="screen" id="s5">
-    <div class="bigheart">💗</div><h2>One tiny question…</h2>
-    <p>Will you keep being my favourite person, Sirji?</p>
-    <div class="choices"><button onclick="yes()">Obviously, Gulgula 😘</button><button class="soft" onclick="tease()">Let me think 🤨</button></div>
-    <p id="answer" class="answer"></p>
-    <button class="restart soft" onclick="go(0)">Read it all again ↺</button>
-  </section>
+<div class="float" style="left:8%;top:15%;font-size:22px">💗</div><div class="float" style="right:8%;top:30%;font-size:20px;animation-delay:-3s">✨</div><div class="float" style="left:12%;bottom:15%;font-size:18px;animation-delay:-5s">💌</div>
+<main>
+<div class="top"><span class="pill">♡ a tiny love corner</span><span>made with love ✨</span></div>
+<section class="phone">
+<div class="subtitle">a little something for</div>
+<h1>Sirji 🩷</h1>
+<div>from your favourite Gulgula 😌</div>
+<div class="envelope-wrap" id="open" role="button" tabindex="0" aria-label="Open your love letter">
+<div class="envelope"><div class="seal">💌</div></div>
+</div>
+<button id="openBtn">Open your letter 💗</button>
+<div class="hint">Psst… tap the envelope. It's not a bill, promise.</div>
+<div id="letter">
+<h2>Hi Sirji, 🩷</h2>
+<p>Okay, first of all… don't let this cute website make your ego bigger. It's already doing overtime. 🙄😂</p>
+<p>But honestly, you're my favourite notification, my comfort person, and the one who can make me smile at my phone like a total idiot.</p>
+<p>I might tease you, annoy you, act dramatic over tiny things, and call you names… but that's basically my love language. Congratulations, you've been selected for unlimited Gulgula nonsense. No returns. 😌</p>
+<p>Thank you for being you, for the little moments, the laughs, and all the things that become special just because they're with you.</p>
+<p>If I could choose one person to bother for a very, very long time… yep, unfortunately for you, it's still you. 🫶</p>
+<p>So here's your reminder: you're loved, you're special to me, and you better keep smiling. This is an official order from Gulgula. 💗</p>
+<p class="sign">Yours lovingly (and annoyingly),<br>Gulgula 🩷</p>
+</div>
+<button class="secondary" id="surpriseBtn" style="display:none;margin-top:16px">One last thing… 👀</button>
+<div id="surprise">Surprise! 🥹💗<br><br>Come here and collect your hug. This website does not accept excuses. 🤗</div>
+<div class="footer">made just for you • no photos needed • always yours ♡</div>
+</section>
 </main>
-<footer>Made with love (and a little bit of clinginess) by Gulgula 🩷</footer>
-<script src="script.js"></script>
+<script>
+const letter=document.getElementById('letter'),btn=document.getElementById('openBtn'),surpriseBtn=document.getElementById('surpriseBtn');
+function hearts(){for(let i=0;i<12;i++){let h=document.createElement('div');h.className='heart';h.textContent=['💗','💕','💖','✨'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'vw';h.style.fontSize=(15+Math.random()*18)+'px';h.style.animationDuration=(3+Math.random()*3)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),6500)}}
+function openLetter(){letter.style.display='block';btn.textContent='Letter opened 💗';btn.disabled=true;surpriseBtn.style.display='block';hearts();setTimeout(()=>letter.scrollIntoView({behavior:'smooth',block:'nearest'}),120)}
+btn.addEventListener('click',openLetter);document.getElementById('open').addEventListener('click',openLetter);document.getElementById('open').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLetter()}});
+surpriseBtn.addEventListener('click',()=>{document.getElementById('surprise').style.display='block';hearts();surpriseBtn.textContent='Hehe, got you 🫶'});
+</script>
 </body></html>
